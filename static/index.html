@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Conversational Agentic AI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>🎙️ Voice Conversational Agentic AI</h1>
+
+  <section id="voice-section">
+    <button id="recordBtn">🎤 Start Recording</button>
+    <button id="sendBtn" disabled>📤 Send to Agent</button>
+    <p id="recordStatus">Not recording</p>
+    <audio id="userPlayback" controls style="display: none;"></audio>
+    <audio id="responseAudio" controls></audio>
+  </section>
+
+  <section id="upload-section">
+    <h3>📂 Upload RAG Documents</h3>
+    <input type="file" id="fileInput" multiple />
+    <button id="uploadBtn">Upload</button>
+    <p id="uploadStatus"></p>
+  </section>
+
+  <section>
+    <button id="resetBtn">🧹 Reset Conversation</button>
+    <p id="resetStatus"></p>
+  </section>
+
+  <!-- ✅ Reference the script at the very end of body -->
+  <script src="/static/script.js"></script>
+</body>
+</html>
