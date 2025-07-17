@@ -1,21 +1,143 @@
+/* === Global Styles === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   text-align: center;
-  padding: 30px;
-  background-color: #f7f7f7;
+  padding: 40px;
+  margin: 0;
+  background: linear-gradient(135deg, #f8f9fa, #e8eefc);
+  color: #333;
+  line-height: 1.6;
 }
 
+/* === Headings === */
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* === Section Containers === */
+section {
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* === Section Headings === */
+section h3 {
+  color: #2d3e60;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* === Buttons === */
 button {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 12px 22px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4e73df, #3758b5);
+  color: white;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-section {
-  margin-top: 30px;
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3758b5, #4e73df);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
+/* Disabled Button */
+button:disabled {
+  background: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* === Status Messages === */
+#recordStatus,
+#uploadStatus,
+#resetStatus {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ✅ Success Messages */
+#uploadStatus:contains('✅'),
+#resetStatus:contains('✅') {
+  color: green;
+  font-weight: bold;
+}
+
+/* ❌ Error Messages */
+#uploadStatus:contains('❌'),
+#resetStatus:contains('❌') {
+  color: red;
+  font-weight: bold;
+}
+
+/* === Audio Players === */
 audio {
-  margin-top: 20px;
+  display: block !important;       /* Force block layout */
+  margin: 10px auto !important;    /* Force 10px spacing between players */
+  width: 100% !important;
+  border-radius: 10px;
+  outline: none;
+  /*box-shadow: 0 3px 8px rgba(0,0,0,0.1);*/
+  background: #fff;
+}
+
+/* === File Input === */
+input[type="file"] {
+  display: block;
+  margin: 12px auto;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  transition: border 0.2s ease-in-out;
+}
+
+input[type="file"]:hover {
+  border-color: #4e73df;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
